@@ -1,0 +1,10 @@
+[target.'cfg(all(target_arch = "arm", target_os = "none"))']
+runner = "probe-rs run --chip STM32F446RETx --connect-under-reset"
+# runner = ["probe-rs", "run", "--chip", "$CHIP", "--log-format", "{L} {s}"]
+
+[build]
+# this is necessary here even if it is specified in rust-tolchain.toml
+target = "thumbv7em-none-eabihf" # Cortex-M4F and Cortex-M7F (with FPU)
+
+[env]
+DEFMT_LOG = "trace"

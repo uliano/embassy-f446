@@ -1,0 +1,21 @@
+0.000000 INFO  main started.
+└─ app::__cortex_m_rt_main @ src\main.rs:116 
+0.000000 INFO  init clocks started.
+└─ app::init_clocks @ src\main.rs:91  
+0.000000 TRACE BDCR ok: 00008200
+└─ embassy_stm32::rcc::bd::{impl#2}::init @ C:\Users\uliano\.cargo\git\checkouts\embassy-9312dcb0ed774b29\81cf9d1\embassy-stm32\src\fmt.rs:117 
+0.000000 DEBUG flash: latency=5
+└─ embassy_stm32::rcc::_version::init @ C:\Users\uliano\.cargo\git\checkouts\embassy-9312dcb0ed774b29\81cf9d1\embassy-stm32\src\fmt.rs:130 
+0.000000 DEBUG rcc: Clocks { hclk1: Some(Hertz(168000000)), hclk2: Some(Hertz(168000000)), hclk3: Some(Hertz(168000000)), hsi_div488: Some(Hertz(32786)), lse: None, pclk1: Some(Hertz(42000000)), pclk1_tim: Some(Hertz(84000000)), pclk2: Some(Hertz(84000000)), pclk2_tim: Some(Hertz(168000000)), pll1_q: None, pllsai1_q: None, rtc: Some(Hertz(32000)), sys: Some(Hertz(168000000)) }
+└─ embassy_stm32::rcc::set_freqs @ C:\Users\uliano\.cargo\git\checkouts\embassy-9312dcb0ed774b29\81cf9d1\embassy-stm32\src\fmt.rs:130 
+0.000000 INFO  resources assigned.
+└─ app::__cortex_m_rt_main @ src\main.rs:119 
+0.000091 INFO  interrupt spawner created.
+└─ app::__cortex_m_rt_main @ src\main.rs:124 
+0.000244 INFO  loop reached.
+└─ app::__exti_task_task::{async_fn#0} @ src\main.rs:38  
+0.000335 INFO  interrupt task spawned.
+└─ app::__cortex_m_rt_main @ src\main.rs:126 
+0.000427 ERROR panicked at 'unwrap failed: embassy_time_driver :: allocate_alarm()'
+error: `Unwrap of a None option value`
+└─ embassy_executor::raw::{impl#9}::new @ C:\Users\uliano\.cargo\git\checkouts\embassy-9312dcb0ed774b29\81cf9d1\embassy-executor\src\fmt.rs:179 
